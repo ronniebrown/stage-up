@@ -1,12 +1,12 @@
 # Project Name
 
-> Pithy project description
+> Lobster is a matching engine for artists looking to work with other artists.
 
 ## Team
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+  - __Product Owner__: Jonathan Seneris
+  - __Scrum Master__: Simon Burns
+  - __Development Team Members__: Ronnie Brown, Thomas Lam
 
 ## Table of Contents
 
