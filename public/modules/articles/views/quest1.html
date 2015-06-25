@@ -1,27 +1,27 @@
 <section data-ng-controller="ArticlesController">
 	<div class="page-header">
-		<h1>Enter your details to find your improv match!</h1>
+		<h1>Let's get started!</h1>
 	</div>
 	<div class="col-md-12">
 		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
 			<fieldset>
 				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What kind of creative are you?</h2>			
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What's your craft?</h2>
 				<div class="form-group">
 				  <div class="btn-group btn-group-justified">
-				  <a ng-model='formData.purpose' class="btn btn-default">Writer</a>
+				  <a ng-model='formData.purpose' class="btn btn-default" ng-disabled="true">Writer</a>
 				  <a ng-model='formData.purpose' class="btn btn-default">Improviser</a>
 				</div>
 				</div>
-				</div>
+			</div>∫
 				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-					<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Prose</h2>			
+					<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Prose</h2>
 				<div class="form-group">
 					  <div class="btn-group btn-group-justified">
-					  <a ng-model='formData.purpose' class="btn btn-default">Fiction</a>
-					  <a ng-model='formData.purpose' class="btn btn-default">Non-Fiction</a>
-					  <a ng-model='formData.purpose' class="btn btn-default">Poetry</a>
-					  <a ng-model='formData.purpose' class="btn btn-default">Screenplay</a>
+					  <a ng-model='formData.purpose' class="btn btn-default" ng-disabled="true">Fiction</a>
+					  <a ng-model='formData.purpose' class="btn btn-default" ng-disabled="true">Non-Fiction</a>
+					  <a ng-model='formData.purpose' class="btn btn-default" ng-disabled="true">Poetry</a>
+					  <a ng-model='formData.purpose' class="btn btn-default" ng-disabled="true">Screenplay</a>
 					</div>
 				</div>
 				</div>
