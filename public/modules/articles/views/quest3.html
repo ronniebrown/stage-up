@@ -1,0 +1,82 @@
+<section data-ng-controller="ArticlesController">
+	<div class="page-header">
+		<h1>Make your profile</h1>
+	</div>
+	<div class="col-md-12">
+		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+			<fieldset>
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">How would your peers describe you?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.about' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What's your improv experience level like?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.improvExperience' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Do you have other acting or comedy experience?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.otherExperience' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Who or what is funny to you?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.funny' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What forms or styles do you prefer?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.styles' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Favorite shows, movies, etc?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.favoriteShows' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What's your idea of the perfect group?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.ideal' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">How often would you want your group to meet or perform, and where?</h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.ideal' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
+					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">I'm looking to connect with... </h2>
+				<div class="form-group">
+				 <input class="form-control-static" id="focusedInput" ng-model='formData.essay.lookingFor' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+				</div>
+				</div>
+
+				<div class="form-group col-xs-6 col-xs-offset-3">
+					<input type="submit" href="quest3" class="btn btn-default" value="Next Section">
+				</div>
+				</div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
