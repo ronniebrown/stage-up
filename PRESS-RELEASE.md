@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Lobster
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Helping artists connect with other artists for collaboration and work-sharing.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Lobster is a social matching engine to help artists find other artists in their field. It builds a profile of attributes like taste, workstyle, and commitment, then makes recommendations based on what you're like and what's important to you.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > There are no good ways for artists to meet. Classes are expensive, ads are broad and unpredictable, meetups are unreliable.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Lobster uses questionnaires to quantify personality traits, then compare those traits with what others are looking for. It's a safe space to reach out to other artists and get a basic sense of who they are.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Do it.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Answer a few questions and start browsing your matches.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > I've met so many artists that I'm excited to work with. Thanks, Lobster!
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Lobster. Find your community.
