@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Demo: Making a bar chart with SVG</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+
+    <style type="text/css">
+    /* No style rules here yet */
+    </style>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+    //Width and height
+    var w = 500;
+    var h = 500;
+    var barPadding = 1;
+
+    var dataset = [25, -10, 35, -20, 5, -30, 15]; //this will be profile ratings
+    var dataDesc = [
+      ["more liberal", "more conservative"],
+      ["more emphasis on diversity", "less emphasis on diversity"],
+      ["more practice", "more casual"],
+      ["more direct", "more passive"],
+      ["more cut and dry", "more compassionate"],
+      ["pushes boundaries", "more inclusive"],
+      ["more industry-driven", "more craft-driven"]
+    ];
+
+    var dataObj = function(val, desc) {
+      this.value = val;
+      this.desc = desc;
+    };
+    var graphPoints = [];
+    for (var i = 0; i < dataset.length; i++) {
+      if (dataset[i] >= 0) {
+        var graphObj = new dataObj(dataset[i], dataDesc[i][0]);
+      } else var graphObj = new dataObj(dataset[i], dataDesc[i][1]);
+      graphPoints.push(graphObj);
+    }
+
+    //Create SVG element
+    var svg = d3.select("body") //change this to the appropriate div
+      .append("svg")
+      .attr("width", w)
+      .attr("height", h);
+
+    svg.selectAll("rect")
+      .data(graphPoints) // maybe put the data inside an object so we can recall names
+      .enter()
+      .append("rect")
+      .attr("x", function(d) {
+        if (d.value >= 0) {
+          return (w / 2) - (d.value * 4);
+        } else {
+          return (w / 2);
+        }
+      })
+      .attr("y", function(d, i) {
+        // return h - (d * 4);
+        return i * ((h / 4) / dataset.length);
+      })
+      .attr("height", (h / 4) / dataset.length - barPadding)
+      .attr("width", function(d) {
+        // console.log(d)
+        return Math.abs(d.value) * 4;
+      })
+      .attr("fill", function(d) { //change colors to match scheme later
+        if (d.value >= 0) return "rgb(150, 100, " + (d.value * 10) + ")";
+        else return "rgb(150, " + (Math.abs(d.value) * 10) + ", 100)";
+      });
+
+    svg.selectAll("text")
+      .data(graphPoints)
+      .enter()
+      .append("text")
+      .text(function(d) {
+        return d.desc;
+      })
+      .attr("text-anchor", function(d) {
+        return d.value >= 0 ? "left" : "right";
+      })
+      .attr("x", function(d) {
+        if (d.value <= 0) {
+          return (w / 2) - (d.desc.length * 7);
+        } else {
+          return (w / 2) + 10;
+        }
+      })
+      .attr("y", function(d, i) {
+        return i * ((h / 4) / dataset.length) + (h / 4) / dataset.length - barPadding - 5;
+      })
+      .attr("font-family", "Courier New")
+      .attr("font-size", "11px")
+      .attr("fill", "black");
+    </script>
+  </body>
+
+</html>
