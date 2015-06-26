@@ -4,6 +4,11 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 	function($scope, $stateParams, $location, Authentication, Articles) {
 		$scope.authentication = Authentication;
 
+		$scope.formData = {};
+		$scope.processForm = function() {
+			console.log($scope.formData);
+		};
+
 		$scope.create = function() {
 			var article = new Articles({
 				title: this.title,
