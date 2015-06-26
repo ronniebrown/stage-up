@@ -1,15 +1,41 @@
 .content {
-	margin-top: 50px;
+    margin-top: 50px;
 }
+
 .undecorated-link:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
 }
+
 .ng-invalid.ng-dirty {
-	border-color: #FA787E;
+    border-color: #FA787E;
 }
+
 .ng-valid.ng-dirty {
-	border-color: #78FA89;
+    border-color: #78FA89;
+}
+
+video .jumbotron {
+    /*position: fixed;*/
+    /*top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;*/
+    /*width: auto;*/
+    /*height: auto;*/
+    /*z-index: -100;*/
+    
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    /*transform: translateX(-50%) translateY(-50%);*/
+    /*background: url(http://sener.is/2015-06-02-market/2015-06-02-market.jpg) no-repeat;*/
+    
+    background-size: cover;
 }
