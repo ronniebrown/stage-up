@@ -209,10 +209,6 @@ var UserSchema = new Schema({
       type: Number,
       value: null
     },
-    education: {
-      type: String,
-      value: null
-    },
     inClasses: {
       type: String,
       value: null

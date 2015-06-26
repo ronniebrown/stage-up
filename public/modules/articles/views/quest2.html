@@ -1,152 +1,194 @@
-<section data-ng-controller="ArticlesController">
-	<div class="page-header">
-		<h1>How do you identify?</h1>
-		<h2>We ask for those looking to form groups around a specific identity. Responses optional.</h2>
-	</div>
-	<div class="col-md-12">
-		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
-			<fieldset>
-				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-					<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Age: </h2>
-					<div class="form-group">
-						<input class="form-control-static" id="focusedInput" ng-model='formData.fixed.age' type="number" value="in years">
-					</div>
-				</div>
-				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-					<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Gender</h2>
-					<div class="form-group">
-						<div class="btn-toolbar">
-							<div class="btn-group">
-								<br></br>
-								<a ng-model='formData.fixed.gender' class="btn btn-default">Male</a>
-								<a ng-model='formData.fixed.gender' class="btn btn-default">Female</a>
-								<a ng-model='formData.fixed.gender' class="btn btn-default">Female to Male Transgender</a>
-								<a ng-model='formData.fixed.gender' class="btn btn-default">Male to Female Transgender</a>
-								<a ng-model='formData.fixed.gender' class="btn btn-default">Androgynous</a>
-								<a ng-model='formData.fixed.gender' class="btn btn-default">Intersex</a>
-								<a ng-model='formData.fixed.gender' class="btn btn-default">Not Sure</a>
-							</div>
-						</div>
-					</div>
-					<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-						<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Ethnic Identity</h2>
-						<div class="form-group">
-							<div class="btn-toolbar">
-								<div class="btn-group">
-									<br></br>
-									<a ng-model='formData.fixed.ethnicity' class="btn btn-default">African</a>
-									<a ng-model='formData.fixed.ethnicity' class="btn btn-default">East Asian</a>
-									<a ng-model='formData.fixed.ethnicity' class="btn btn-default">South Asian</a>
-									<a ng-model='formData.fixed.ethnicity' class="btn btn-default">European</a>
-									<a ng-model='formData.fixed.ethnicity' class="btn btn-default">Native American</a>
-									<a ng-model='formData.fixed.ethnicity' class="btn btn-default">Pacific Islander</a>
-									<a ng-model='formData.fixed.ethnicity' class="btn btn-default">Mixed</a>
-								</div>
-							</div>
-						</div>
-						<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-							<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Do you identify as LGBT?</h2>
-							<div class="form-group">
-								<div class="btn-toolbar">
-									<div class="btn-group">
-										<br></br>
-										<a ng-model='formData.fixed.orientation' class="btn btn-default">Yes</a>
-										<a ng-model='formData.fixed.orientation' class="btn btn-default">No</a>
-										<a ng-model='formData.fixed.orientation' class="btn btn-default">Prefer not to answer</a>
-									</div>
-								</div>
-							</div>
-						<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-							<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Party Politics</h2>
-							<div class="form-group">
-								<div class="btn-toolbar">
-									<div class="btn-group">
-										<br></br>
-										<a ng-model='formData.fixed.politics' class="btn btn-default">Democrat</a>
-										<a ng-model='formData.fixed.politics' class="btn btn-default">Republican</a>
-										<a ng-model='formData.fixed.politics' class="btn btn-default">Libertarian</a>
-										<a ng-model='formData.fixed.politics' class="btn btn-default">Independent</a>
-										<a ng-model='formData.fixed.politics' class="btn btn-default">Indifferent</a>
-										<a ng-model='formData.fixed.politics' class="btn btn-default">Other</a>
-									</div>
-								</div>
-							</div>
-							<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-								<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Experience in improv/comedy</h2>
-								<div class="form-group">
-									<div class="btn-toolbar">
-										<div class="btn-group">
-											<br></br>
-											<a ng-model='formData.fixed.experienceInYears' class="btn btn-default">A few months or less</a>
-											<a ng-model='formData.fixed.experienceInYears' class="btn btn-default">About a year</a>
-											<a ng-model='formData.fixed.experienceInYears' class="btn btn-default">A few years</a>
-											<a ng-model='formData.fixed.experienceInYears' class="btn btn-default">Five or more years</a>
-											<a ng-model='formData.fixed.experienceInYears' class="btn btn-default">A decade or more</a>
-										</div>
-									</div>
-								</div>
-								<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-									<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Formal Education</h2>
-									<div class="form-group">
-										<div class="btn-toolbar">
-											<div class="btn-group">
-												<br></br>
-												<a ng-model='formData.fixed.education' class="btn btn-default">The Annoyance</a>
-												<a ng-model='formData.fixed.education' class="btn btn-default">Groundlings</a>
-												<a ng-model='formData.fixed.education' class="btn btn-default">iO</a>
-												<a ng-model='formData.fixed.education' class="btn btn-default">The Nerdist</a>
-												<a ng-model='formData.fixed.education' class="btn btn-default">PIT</a>
-												<a ng-model='formData.fixed.education' class="btn btn-default">Second City</a>
-												<a ng-model='formData.fixed.education' class="btn btn-default">UCB</a>
-												<a ng-model='formData.fixed.education' class="btn btn-default">Other</a>
-											</div>
-										</div>
-									</div>
-									<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-										<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Are you currently enrolled in or signed up for an upcoming class?</h2>
-										<div class="form-group">
-											<div class="btn-toolbar">
-												<div class="btn-group">
-													<br></br>
-													<a ng-model='formData.fixed.inClasses' class="btn btn-default">Yes</a>
-													<a ng-model='formData.fixed.inClasses' class="btn btn-default">No</a>
-												</div>
-											</div>
-										</div>
-										<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-											<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Are you currently in a group?</h2>
-											<div class="form-group">
-												<div class="btn-toolbar">
-													<div class="btn-group">
-														<br></br>
-														<a ng-model='formData.fixed.inGroup' class="btn btn-default">Yes</a>
-														<a ng-model='formData.fixed.inGroup' class="btn btn-default">No</a>
-													</div>
-												</div>
-											</div>
-											<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
-												<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">What are you hoping to find here?</h2>
-												<div class="form-group">
-													<div class="btn-toolbar">
-														<div class="btn-group">
-															<br></br>
-															<a ng-model='formData.fixed.seeking' class="btn btn-default">Friends</a>
-															<a ng-model='formData.fixed.seeking' class="btn btn-default">Collaborators</a>
-															<a ng-model='formData.fixed.seeking' class="btn btn-default">A new group</a>
-															<a ng-model='formData.fixed.seeking' class="btn btn-default">New members for a current group</a>
-														</div>
-													</div>
-												</div>
+<!-- <section data-ng-controller="ArticlesController">
+ -->
+<!-- <div class="page-header"> -->
+<!-- <h1>How do you identify?</h1>
+<h2>We ask for those looking to form groups around a specific identity. Responses optional.</h2>
+ -->
+<!-- </div> -->
+<!-- <div class="col-md-12">
+  <form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+    <fieldset>
+ -->
+<div class="form-group">
+  <h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Age: </h2>
+  <input class="form-control-static" id="focusedInput" ng-model='formData.fixed.age' type="number">
+</div>
+
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Gender</h2>
+<div class="form-group">
+
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.gender' value="male">Male</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.gender' value="female">Female</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.gender' value="mtf">Male to Female Transgender</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.gender' value="ftm">Female to Male Transgender</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.gender' value="androgynous">Androgynous</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.gender' value="notsure">Not Sure</label>
+
+</div>
+</div>
+
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Ethnic Identity</h2>
+<div class="form-group">
+
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="african">African</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="eastasian">East Asian</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="southasian">South Asian</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="european">European</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="hispanic">Hispanic-Latino-Chicano</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="middleeastern">Middle Eastern</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="nativeamerican">Native American</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="paciticislander">Pacific Islander</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.ethnicity' value="mixed">Mixed</label>
+
+</div>
+</div>
+
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Do you identify as LGBT?</h2>
+<div class="form-group">
+
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.orientation' value="yes">Yes</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.orientation' value="no">No</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.orientation' value="myob">Prefer Not to Answer</label>
+</div>
+</div>
+
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Party Politics</h2>
+<div class="form-group">
+
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.politics' value="democrat">Democrat</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.politics' value="republican">Republican</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.politics' value="libertarian">Libertarian</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.politics' value="independent">Independent</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.politics' value="indifferent">Indifferent</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.politics' value="other">Other</label>
+</div>
+</div>
+
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Experience in improv/comedy</h2>
+<div class="form-group">
+
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.experienceInYears' value="0">A few months</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.experienceInYears' value="1">About a year</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.experienceInYears' value="2">A few years</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.experienceInYears' value="5">Five or more years</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.experienceInYears' value="10">A decade or more</label>
+  </br>
+
+</div>
+</div>
 
 
-												<div class="form-group col-xs-6 col-xs-offset-3">
-													<input type="submit" href="quest3" class="btn btn-default" value="Next Section">
-												</div>
-											</div>
-											<div data-ng-show="error" class="text-danger">
-												<strong data-ng-bind="error"></strong>
-											</div>
-			</fieldset>
-		</form>
-		</div>
-</section>
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Are you currently enrolled in or signed up for an upcoming class?</h2>
+<div class="form-group">
+
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.inClasses' value="yes">Yes</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.inClasses' value="no">No</label>
+  </br>
+
+</div>
+</div>
+
+
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">Are you currently in a group?</h2>
+<div class="form-group">
+
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.inGroup' value="yes">Yes</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.inGroup' value="no">No</label>
+  </br>
+
+
+</div>
+</div>
+
+
+<h2 class="control-label col-xs-6 col-xs-offset-2" for="title">What are you primarily hoping to find here?</h2>
+<div class="form-group">
+  <br></br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.seeking' value="friends">Friends</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.seeking' value="collaborators">Collaborators</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.seeking' value="group">A new group</label>
+  </br>
+  <label>
+    <input type="radio" ng-model='formData.fixed.seeking' value="members">New members for a current group</label>
+  </br>
+
+
+</div>
+</div>
+
+
+<div class="form-group col-xs-6 col-xs-offset-3">
+  <a type="submit" ui-sref="form.quest3" class="btn btn-default">Next Section</a>
+</div>
+<pre> {{formData}}</pre>
