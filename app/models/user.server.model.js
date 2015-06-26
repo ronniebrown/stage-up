@@ -94,13 +94,13 @@ var UserSchema = new Schema({
     username: {
       type: String,
       unique: 'testing error message',
-      required: 'Please fill in a username',
+      // required: 'Please fill in a username',
       value: '',
       trim: true
     },
     location: {
       type: Number,
-      required: 'Please enter zip code.',
+      // required: 'Please enter zip code.',
       value: '',
       trim: true
     },
@@ -121,7 +121,7 @@ var UserSchema = new Schema({
       type: String,
       description: 'how would others describe you?',
       unique: 'testing error message',
-      required: 'please enter a description',
+      // required: 'please enter a description',
       value: '',
       trim: true
     },
@@ -149,7 +149,6 @@ var UserSchema = new Schema({
       type: String,
       description: 'who or what is funny to you?',
       unique: 'testing error message',
-      required: 'please enter a description',
       value: '',
       trim: true
     },
@@ -186,12 +185,12 @@ var UserSchema = new Schema({
   fixed: {
     age: {
       type: Number,
-      description: "age: ",
+      description: 'age: ',
       value: null
     },
     gender: {
       type: String,
-      description: "age: ",
+      description: 'age: ',
       value: null
     },
     ethnicity: {
@@ -208,10 +207,6 @@ var UserSchema = new Schema({
     },
     experienceInYears: {
       type: Number,
-      value: null
-    },
-    education: {
-      type: String,
       value: null
     },
     inClasses: {

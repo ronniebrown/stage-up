@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#profile-thumb {
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+
+#profile-thumb img {
+  position: absolute;
+  top: 0%;
+}
+
+.empty-spacing {
+  margin: 0 2px;
+}
+
+#glyphicon-pencil {
+  width: 15px;
+  height: 15px;
+}
+
+.tabs .tab a {
+  color: #8C78BD;
+}
+
+.tabs .tab a:hover {
+  color: #AD93E9;
+}
+
+.tabs .indicator {
+  background-color: #8C78BD;
+}
+
+#tab-text-center {
+  text-align: center;
+}
+
