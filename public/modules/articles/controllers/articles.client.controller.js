@@ -5,6 +5,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		$scope.authentication = Authentication;
 		$scope.formData = {};
 		$scope.processForm = function(){
+			console.log("it works")
 			console.log($scope.formData);
 		};
 
