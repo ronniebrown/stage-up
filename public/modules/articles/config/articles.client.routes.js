@@ -19,13 +19,13 @@ angular.module('articles').config(['$stateProvider',
     }).
     state('form', {
       url: '/form',
-      templateUrl: 'modules/articles/views/quest1.html',
+      templateUrl: 'modules/articles/views/questions.html',
       controller: 'ArticlesController'
     }).
-    // state('form.quest1', {
-    //   url: '/quest1',
-    //   templateUrl: 'modules/articles/views/quest1.html'
-    // }).
+    state('form.quest1', {
+      url: '/quest1',
+      templateUrl: 'modules/articles/views/quest1.html'
+    }).
     state('form.quest2', {
       url: '/quest2',
       templateUrl: 'modules/articles/views/quest2.html'
