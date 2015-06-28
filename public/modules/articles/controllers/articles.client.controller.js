@@ -50,7 +50,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		};
 
 		$scope.findOne = function() {
-			$scope.article = Articles.get({
+			$scope.profile = Articles.get({
 				articleId: $stateParams.articleId
 			});
 		};

@@ -5,172 +5,267 @@
  -->
 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Profile</title>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
 
-    <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!--   FIX THIS -->
+<style>
+body {
+  padding: 50px;
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+}
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+a {
+  color: #00B7FF;
+}
 
-    <!-- FIX THIS -->
-    <style>
-      body {
-        padding: 50px;
-        font: 14px "Open Sans", Helvetica, Arial, sans-serif;
-      }
+#profile-thumb {
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
 
-      a {
-        color: #00B7FF;
-      }
+#profile-thumb img {
+  position: absolute;
+  top: 0%;
+}
 
-      #profile-thumb {
-        position: relative;
-        width: 300px;
-        height: 250px;
-      }
+.empty-spacing {
+  margin: 0 2px;
+}
 
-      #profile-thumb img {
-        position: absolute;
-        top: 0%;
-      }
+#glyphicon-pencil {
+  width: 15px;
+  height: 15px;
+}
 
-      .empty-spacing {
-        margin: 0 2px;
-      }
+.tabs .tab a {
+  color: #8C78BD;
+}
 
-      #glyphicon-pencil {
-        width: 15px;
-        height: 15px;
-      }
+.tabs .tab a:hover {
+  color: #AD93E9;
+}
 
-      .tabs .tab a {
-        color: #8C78BD;
-      }
+.tabs .indicator {
+  background-color: #8C78BD;
+}
 
-      .tabs .tab a:hover {
-        color: #AD93E9;
-      }
-
-      .tabs .indicator {
-        background-color: #8C78BD;
-      }
-
-      #tab-text-center {
-        text-align: center;
-      }
-    </style>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+#tab-text-center {
+  text-align: center;
+}
+</style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <!-- HEADER SECTION -->
-    <div class="row">
-      <div class="col s3" id="profile-thumb">
-        <!-- FIX THIS -->
-        <!-- src should be /public/modules/articles/images/profile-img.webp -->
-        <img src="./images/profile-img.webp" alt="profile pic">
-      </div>
-      <div class="col s3">
-        <span id="username" class="flow-text">lobsteranddeath</span>
-        <br>
-        <span id="age">35</span>
-        <span class="bullet">&#149;</span>
-        <span id="location">Los Angeles</span>
-        <span class="bullet">&#149;</span>
-        <span id="gender">Male</span>
-        <span class="empty-spacing"></span>
+<!--  </head> -->
 
-        <!-- FIX THIS -->
-        <!-- src should be /public/modules/articles/images/glyphicons/glyphicons-31-pencil.png -->
-        <img id="glyphicon-pencil" src="./images/glyphicons/glyphicons-31-pencil.png" alt="pencil-glyphicon">
-      </div>
+
+<section data-ng-controller="ArticlesController as profile" data-ng-init="findOne()">
+  <!--   <div class="page-header">
+    <h1 data-ng-bind="article.title"></h1>
+  </div>
+  <div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
+    <a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" data-ng-click="remove();">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span data-ng-bind="article.created | date:'mediumDate'"></span>
+      by
+      <span data-ng-bind="article.user.displayName"></span>
+    </em>
+  </small>
+  <p class="lead" data-ng-bind="article.content"></p>
+</section> -->
+  <!-- 
+  <body ng-controller="ArticlesController as profile">
+ -->
+  <!-- HEADER SECTION -->
+  <!-- <div class="row">
+      <div class="col s3" id="profile-thumb"> -->
+  <!-- FIX THIS -->
+  <!-- src should be /public/modules/articles/images/profile-img.webp -->
+  <!-- <img src="./images/profile-img.webp" alt="profilepic"> -->
+  <!-- </div> -->
+  <div class="col s3">
+    <img ng-src="{{ profile.basic.picture }}">
+    <span id="username" class="flow-text">{{ profile.username }}</span>
+    <br>
+    <div class="fixedBox">
+      age: <span class="fixed"> {{ profile.basic.age }} </span>
+      <span class="bullet">&#149;</span>
+      <br> location: <span class="fixed"> {{ profile.basic.location }} </span>
+      <span class="bullet">&#149;</span>
+      <br> gender: <span class="fixed"> {{ profile.fixed.gender }} </span>
+      <span class="empty-spacing"></span>
+      <br> ethnicity: <span class="fixed"> {{ profile.fixed.ethnicity }} </span>
+      <span class="empty-spacing"></span>
+      <br> orientation: <span class="fixed"> {{ profile.fixed.orientation }} </span>
+      <span class="empty-spacing"></span>
+      <br> politics: <span class="fixed"> {{ profile.fixed.politics }} </span>
+      <span class="empty-spacing"></span>
+      <br> years experience: <span class="fixed"> {{ profile.fixed.experienceInYears }} </span>
+      <span class="empty-spacing"></span>
+      <br> currently in classes? <span class="fixed"> {{ profile.fixed.inClasses }} </span>
+      <span class="empty-spacing"></span>
+      <br> currently in a group? <span class="fixed"> {{ profile.fixed.inGroup }} </span>
+      <span class="empty-spacing"></span>
+      <br> looking for: <span class="fixed"> {{ profile.fixed.seeking }} </span>
+      <span class="empty-spacing"></span>
+    </div>
+    <!-- FIX THIS -->
+    <!-- src should be /public/modules/articles/images/glyphicons/glyphicons-31-pencil.png -->
+    <!-- <img id="glyphicon-pencil" src="./images/glyphicons/glyphicons-31-pencil.png" alt="pencil-glyphicon"> -->
+  </div>
+  </div>
+
+  <div class="row">
+    <!-- TABS SECTION -->
+    <div class="col s12 z-depth-1">
+      <ul class="tabs" id="tab-text-center">
+        <li class="tab col s3">
+          <a class="active " href="#about">About</a>
+        </li>
+        <li class="tab col s3">
+          <a class="" href="#photos">Work Samples</a>
+        </li>
+        <li class="tab col s3">
+          <a class="" href="#questions">Questions</a>
+        </li>
+        <li class="tab col s3">
+          <a class="" href="#personality">Personality</a>
+        </li>
+      </ul>
     </div>
 
-    <div class="row">
-    <!-- TABS SECTION -->
-      <div class="col s12 z-depth-1" >
-        <ul class="tabs" id="tab-text-center">
-          <li class="tab col s3">
-            <a class="active " href="#about">About</a>
-          </li>
-          <li class="tab col s3">
-            <a class="" href="#photos">Photos</a>
-          </li>
-          <li class="tab col s3">
-            <a class="" href="#questions">Questions</a>
-          </li>
-          <li class="tab col s3">
-            <a class="" href="#personality">Personality</a>
-          </li>
-        </ul>
-      </div>
-
-      <br>
-      <!-- MAIN SECTION -->
-      <div class="col s12 z-depth-1" id="about">
+    <br>
+    <!-- MAIN SECTION -->
+    <!-- <div class="col s12 z-depth-1" id="about">
         <div class="col s6">
           <p class="flow-text">
-            Basic info:
+            About Me:
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae autem reiciendis quibusdam doloribus quo sapiente maxime omnis libero, fugiat ratione. Tempora tenetur ex, dolores cum magnam expedita neque non temporibus!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quod, exercitationem. Praesentium quibusdam eveniet debitis eaque officia numquam aperiam quod quaerat molestias asperiores beatae incidunt, facilis nesciunt delectus sed reiciendis.
+            {{ profile.essay.about }}
           </p>
         </div>
         <div class="col s6">
           <p class="flow-text">
-            Looking for:
+            I'm looking to connect with:
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex, dolores minus voluptatum atque voluptatibus, sed architecto numquam in nobis praesentium, expedita, tempora assumenda sit blanditiis? Sit laudantium nam doloribus.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam debitis magnam alias maiores sapiente quia corporis voluptatem nostrum nam corrupti repellendus doloremque iste fugiat quidem vel obcaecati, enim possimus consequuntur.
+            {{ profile.essay.lookingFor }}
           </p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="col s12 z-depth-1" id="photos">
-        <p class="flow-text">
-          Photos section
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat sapiente assumenda facere ut cupiditate excepturi incidunt, tempora est libero. Voluptatibus quibusdam impedit eligendi iure fuga nemo vero voluptate laboriosam, quas.
-        </p>
-      </div>
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        about Me:
+      </p>
+      <p>
+        {{ profile.essay.about }}
+      </p>
+    </div>
 
-      <div class="col s12 z-depth-1" id="questions">
-        <p class="flow-text">
-          Questions section
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus temporibus voluptates vero tempora harum, qui debitis recusandae rem! Cum molestias animi officia nisi veniam assumenda, accusantium sapiente ea amet.
-        </p>
-      </div>
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        where have you studied and for how long?:
+      </p>
+      <p>
+        {{ profile.essay.improvExperience }}
+      </p>
+    </div>
 
-      <div class="col s12 z-depth-1" id="personality">
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        do you have any other acting or comedy experience?
+      </p>
+      <p>
+        {{ profile.essay.otherExperience }}
+      </p>
+    </div>
+
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        what forms or styles do you like?
+      </p>
+      <p>
+        {{ profile.essay.styles }}
+      </p>
+    </div>
+
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        favorite shows and movies:
+      </p>
+      <p>
+        {{ profile.essay.favoriteShows }}
+      </p>
+    </div>
+
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        what's your idea of the perfect group?
+      </p>
+      <p>
+        {{ profile.essay.ideal }}
+      </p>
+    </div>
+
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        how often do you want to meet, practice, or perform?
+      </p>
+      <p>
+        {{ profile.essay.workstyle }}
+      </p>
+    </div>
+
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        i'm looking to connect with:
+      </p>
+      <p>
+        {{ profile.essay.lookingFor }}
+      </p>
+    </div>
+
+
+    <!--       <div class="col s12 z-depth-1" id="personality">
         <p class="flow-text">
           Personality section
         </p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est aliquid consequatur deserunt, vel maxime veniam ipsum, labore. Quidem alias repellat perspiciatis fugiat veritatis, distinctio dolorem maxime laborum nihil nemo.
         </p>
-      </div>
-    </div>
-    
+      </div> -->
+  </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+  <!--   <div class="row">
+    <div class="col s12 z-depth-1">
+      <p class="flow-text">
+        i'm looking to connect with:
+      </p>
+      <p>
+        {{ profile.essay.lookingFor }}
+      </p>
+    </div>
+  </div>
+ -->
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
   </body>
-</html>
+
+  </html>

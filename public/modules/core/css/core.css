@@ -39,3 +39,13 @@ video .jumbotron {
     
     background-size: cover;
 }
+
+.fixed {
+    font-family: "Courier New"
+    color: green;
+    background-color: grey;
+}
+.fixedBox {
+    background-color: black;
+    color: white;
+}
