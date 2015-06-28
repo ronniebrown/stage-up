@@ -1,19 +1,19 @@
 'use strict';
 
-angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
-	function($scope, $stateParams, $location, Authentication, Articles) {
+angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles', 'Users',
+	function($scope, $stateParams, $location, Authentication, Articles, Users) {
 		$scope.authentication = Authentication;
 
+		$scope.formData = {};
+		
+
 		$scope.create = function() {
-			var article = new Articles({
-				title: this.title,
-				content: this.content
-			});
+			var article = new Articles($scope.formData);
 			article.$save(function(response) {
 				$location.path('articles/' + response._id);
 
-				$scope.title = '';
-				$scope.content = '';
+				// $scope.title = '';
+				// $scope.content = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -50,7 +50,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		};
 
 		$scope.findOne = function() {
-			$scope.article = Articles.get({
+			$scope.profile = Articles.get({
 				articleId: $stateParams.articleId
 			});
 		};
