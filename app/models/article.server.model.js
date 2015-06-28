@@ -4,20 +4,25 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema;
 
 /**
  * Article Schema
  */
 var ArticleSchema = new Schema({
-	basic: {
-    username: {
-      type: String,
-      unique: 'testing error message',
-      // required: 'Please fill in a username',
-      value: '',
-      trim: true
-    },
+  
+  username: {
+    type: String,
+    unique: 'testing error message',
+    required: 'Please fill in a username',
+    trim: true
+  },
+  password: {
+    type: String,
+    default: '',
+    // validate: [validateLocalStrategyPassword, 'Password should be longer']
+  },
+  basic: {
     location: {
       type: Number,
       // required: 'Please enter zip code.',
@@ -40,63 +45,53 @@ var ArticleSchema = new Schema({
     about: {
       type: String,
       description: 'how would others describe you?',
-      unique: 'testing error message',
-      // required: 'please enter a description',
       value: '',
       trim: true
     },
     improvExperience: {
       type: String,
       description: 'where have you studied and for how long?',
-      unique: 'testing error message',
       trim: true
     },
     otherExperience: {
       type: String,
       description: 'do you have any other acting or comedy experience?',
-      unique: 'testing error message',
       value: '',
       trim: true
     },
     styles: {
       type: String,
       description: 'what forms or styles do you like?',
-      unique: 'testing error message',
       value: '',
       trim: true
     },
     funny: {
       type: String,
       description: 'who or what is funny to you?',
-      unique: 'testing error message',
       value: '',
       trim: true
     },
     favoriteShows: {
       type: String,
       description: 'favorite shows and movies:',
-      unique: 'testing error message',
       value: '',
       trim: true
     },
     ideal: {
       type: String,
       description: 'what\'s your idea of the perfect group?',
-      unique: 'testing error message',
       value: '',
       trim: true
     },
     workstyle: {
       type: String,
       description: 'how often do you want to meet, practice, or perform?',
-      unique: 'testing error message',
       value: '',
       trim: true
     },
     lookingFor: {
       type: String,
       description: 'i\'m looking to connect with:',
-      unique: 'testing error message',
       value: '',
       trim: true
     },

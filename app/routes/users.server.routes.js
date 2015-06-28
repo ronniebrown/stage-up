@@ -52,6 +52,35 @@ module.exports = function(app) {
 	app.route('/auth/github').get(passport.authenticate('github'));
 	app.route('/auth/github/callback').get(users.oauthCallback('github'));
 
+	// app.route('/articles')
+	// .get(function(req, res, next) {
+ //      mongoose.model('User').find({}, function(err, users) {
+ //        if (err) {
+ //          return console.error(err);
+ //        } else {
+ //        	console.log('send back all the profiles')
+ //          // send back all the profiles
+ //        }
+ //      });
+ //    })
+
+
+
+ //    .post(function(formData) { // this should be the form data. how to link user and profile without foreign keys?
+ //        console.log(formData);
+ //        // mongoose.model('User').create(formData);
+ //      }, function(err, user) {
+ //        if (err) {
+ //          res.send('Problem');
+ //        } else {
+ //          console.log('user created: ', formData.basic.username);
+ //          // res.format({
+ //          //   res.location('profile'),
+ //          //   res.redirect('/profile')
+ //          // })
+ //        }
+ //      });
+
 	// Finish by binding the user middleware
 	app.param('userId', users.userByID);
 };
