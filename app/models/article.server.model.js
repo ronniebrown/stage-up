@@ -29,8 +29,8 @@ var ArticleSchema = new Schema({
       value: '',
       trim: true
     },
-    age: { //this is a birthdate that calculates age
-      type: Date,
+    age: { //this should be changed to a birthdate that calculates age
+      type: Number,
       value: '',
       trim: true
     },
