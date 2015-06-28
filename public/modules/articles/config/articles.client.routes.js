@@ -15,7 +15,8 @@ angular.module('articles').config(['$stateProvider',
     // }).
     state('viewArticle', {
       url: '/articles/:articleId',
-      templateUrl: 'modules/articles/views/view-article.client.view.html'
+      templateUrl: 'modules/articles/views/profile.html',
+      controller: 'ArticlesController'
     }).
     state('form', {
       url: '/form',
