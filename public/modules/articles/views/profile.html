@@ -110,16 +110,17 @@ a {
         <span class="bullet">&#149;</span>
         <br> gender: <span class="fixed"> {{ profile.fixed.gender }} </span>
         <span class="empty-spacing"></span> -->
-        
+
         <ul>
 
-          <li> ethnicity  <span class="fixed"> {{ profile.fixed.ethnicity }} </span></li>
-          <li> orientation  <span class="fixed"> {{ profile.fixed.orientation }} </span></li>
-          <li> politics  <span class="fixed"> {{ profile.fixed.politics }} </span></li>
-          <li> years experience  <span class="fixed"> {{ profile.fixed.experienceInYears }} </span></li>
-          <li> currently in classes?  <span class="fixed"> {{ profile.fixed.inClasses }} </span></li>
-          <li> currently in a group?  <span class="fixed"> {{ profile.fixed.inGroup }} </span></li>
-          <li> looking for  <span class="fixed"> {{ profile.fixed.seeking }} </span></li>
+          <li> ethnicity <span class="fixed"> {{ profile.fixed.ethnicity }} </span></li>
+          <li> orientation <span class="fixed"> {{ profile.fixed.orientation }} </span></li>
+          <li> politics <span class="fixed"> {{ profile.fixed.politics }} </span></li>
+          <li> years experience <span class="fixed"> {{ profile.fixed.experienceInYears }} </span></li>
+          <li> currently in classes? <span class="fixed"> {{ profile.fixed.inClasses }} </span></li>
+          <li> currently in a group? <span class="fixed"> {{ profile.fixed.inGroup }} </span></li>
+          <li> looking for <span class="fixed"> {{ profile.fixed.seeking }} </span>
+          </li>
         </ul>
       </div>
     </div>
@@ -128,27 +129,16 @@ a {
     <!-- <img id="glyphicon-pencil" src="./images/glyphicons/glyphicons-31-pencil.png" alt="pencil-glyphicon"> -->
 
 
-    <div class="profileBody">
-      <!-- TABS SECTION -->
-      <!-- <div class="col s12 z-depth-1">
-      <ul class="tabs" id="tab-text-center">
-        <li class="tab col s3">
-          <a class="active " href="#about">About</a>
-        </li>
-        <li class="tab col s3">
-          <a class="" href="#photos">Work Samples</a>
-        </li>
-        <li class="tab col s3">
-          <a class="" href="#questions">Questions</a>
-        </li>
-        <li class="tab col s3">
-          <a class="" href="#personality">Personality</a>
-        </li>
+    <div id="tabs">
+      <ul>
+        <li ng-repeat="tab in tabs" ng-class="{active:isActiveTab(tab.url)}" ng-click="onClickTab(tab)">{{tab.title}}</li>
       </ul>
+      <div id="mainView">
+        <div ng-include="currentTab"></div>
+      </div>
     </div>
+    <script type="text/ng-template" id="one.tpl.html">
 
-    <br>
- -->
 
       <div class="essay">
         <p class="essayQ">
@@ -222,32 +212,161 @@ a {
         </p>
       </div>
 
+    </script>
 
-      <!--       <div class="col s12 z-depth-1" id="personality">
-        <p class="flow-text">
-          Personality section
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est aliquid consequatur deserunt, vel maxime veniam ipsum, labore. Quidem alias repellat perspiciatis fugiat veritatis, distinctio dolorem maxime laborum nihil nemo.
-        </p>
-      </div> -->
-    </div>
 
-    <!--   <div class="row">
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        i'm looking to connect with:
-      </p>
-      <p>
-        {{ profile.essay.lookingFor }}
-      </p>
-    </div>
+    <script type="text/ng-template" id="two.tpl.html">
+
+      <iframe src="https://player.vimeo.com/video/90625149" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <p><a href="https://vimeo.com/90625149">my comedy reel</a> from <a href="https://vimeo.com/user277716">hankthedog</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+    </script>
+
+    <script type="text/ng-template" id="three.tpl.html">
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">is diversity important to you at this time?</h2>
+
+        <input type="radio" ng-model='formData.ratings.diversity' value="+=10">absolutely, i’m looking to work with people from different backgrounds
+        </br>
+        <input type="radio" ng-model='formData.ratings.diversity' value="+=10">i’m looking for a group that represents a particular ethnicity, orientation, gender, or other identity
+        </br>
+        <input type="radio" ng-model='formData.ratings.diversity' value="+=5">it’s not the most important thing, but it’d be nice to have a range
+        </br>
+        <input type="radio" ng-model='formData.ratings.diversity' value="0">it’s not an important factor in how i select the people i work with
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">which of these best describes your involvement level?</h2>
+
+        <input type="radio" ng-model='formData.ratings.commitment' value="+=10">comedy is my livelihood.
+        </br>
+        <input type="radio" ng-model='formData.ratings.commitment' value="+=7">comedy is my passion. it’s how i spend all my free time.
+
+        </br>
+        <input type="radio" ng-model='formData.ratings.commitment' value="+=1">improv is great, but it’s just one tool in my acting repertoire.
+        </br>
+        <input type="radio" ng-model='formData.ratings.commitment' value="-3">improv is great, though I wouldn’t say my life revolves around it.
+        </br>
+        <input type="radio" ng-model='formData.ratings.commitment' value="0">i’m just getting into improv and looking to explore.
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">During a show, your teammate undermines your performance – steamrolling, denying, rolling his eyes to the audience. How do you handle this?</h2>
+
+        <input type="radio" ng-model='formData.ratings.conflict' value="+=10">in the next opportune scene, do the same thing to them. That’ll learn em.
+        </br>
+        <input type="radio" ng-model='formData.ratings.conflict' value="+=5">wait until you’re offstage and then let them and the whole team know how you feel.
+
+        </br>
+        <input type="radio" ng-model='formData.ratings.conflict' value="0">find them alone after the show and ask if they knew what they were doing.
+        </br>
+        <input type="radio" ng-model='formData.ratings.conflict' value="-7">make a mental note and wait to see if they apologize.
+        </br>
+        <input type="radio" ng-model='formData.ratings.conflict' value="-4">ignore it. they’re the one who should be embarassed
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">your group has scheduled practice at your coach’s house, but the night before, your coach remembers there’s a marathon and street closings which will make everyone’s commute very difficult. there are no alternative spaces or times that work for everyone that week. coach asks what you want to do.</h2>
+
+        <input type="radio" ng-model='formData.ratings.commitment' value="+=10">i don’t care how bad the commute is. i need my reps.
+        </br>
+        <input type="radio" ng-model='formData.ratings.commitment' value="+=5">i’d prefer to cancel it, but if everyone else is going, i’ll go.
+
+        </br>
+        <input type="radio" ng-model='formData.ratings.commitment' value="0">i’m staying home. Let’s be reasonable - it’s just one week.
+        </br>
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">you’re in a group, but one of your members is clearly the weakest and they don’t seem to be improving. what do you want to do?</h2>
+
+        <input type="radio" ng-model='formData.ratings.attitude' value="+=10">the only way to get better is to work with better people. we need to find someone else.
+        </br>
+        <input type="radio" ng-model='formData.ratings.attitude' value="+=5">for shows, I would avoid doing scenes with them. You never know who’s watching.
+        </br>
+        <input type="radio" ng-model='formData.ratings.attitude' value="0">i'm just worrying about me. it’s not like they suck on purpose.
+        </br>
+        <input type="radio" ng-model='formData.ratings.attitude' value="0">it would be a good challenge to try and make them funny.
+        </br>
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">Louis CK made headlines with this bit in an SNL monologue.
+        <blockquote>“Child molesters are very tenacious people. They love molesting [children]. It's crazy. It's like their favorite thing. When you consider the risk of being a child molester — there is no worse life available to a human than being a caught child molester. And yet they still do it... From which you could only really surmise that it must be really good.”</blockquote>
+        Thoughts? </h2>
+
+
+        <input type="radio" ng-model='formData.ratings.edginess' value="+=10">that bit was hilarious.
+        </br>
+        <input type="radio" ng-model='formData.ratings.edginess' value="+=5">I don't have a problem with it, but I wouldn't do it.
+        </br>
+        <input type="radio" ng-model='formData.ratings.edginess' value="0">Whether or not it's funny, the discomfort it must've caused some people wasn't worth it.
+        </br>
+        <input type="radio" ng-model='formData.ratings.edginess' value="0">lame shock value bit. not impressed.
+        </br>
+        <input type="radio" ng-model='formData.ratings.edginess' value="0">Where do I sign the boycott petition?
+        </br>
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">which of these is the more satisfying feeling?</h2>
+
+        <input type="radio" ng-model='formData.ratings.attitude' value="+=10">delivering the lines that make everyone die rofling. those laughs keep me going.
+        </br>
+        <input type="radio" ng-model='formData.ratings.attitude' value="+=5">setting up my teammates and watching them knock em down. being that connected with my teammates is so gratifying.
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">what is the role of politics in your work?</h2>
+
+        <input type="radio" ng-model='formData.ratings.politics' value="+=10">comedy is just a medium. politics are what’s important. if you don’t stand for something, you’ll fall for anything.
+        </br>
+        <input type="radio" ng-model='formData.ratings.politics' value="+=5">i like using comedy as a way to speak truth to power. i also like fart jokes. in a perfect world i would just blow farts to power.
+        </br>
+        <input type="radio" ng-model='formData.ratings.politics' value="+=0">politicians are all the same. it’s a broken system but i have my own life to worry about.
+        </br>
+        <input type="radio" ng-model='formData.ratings.politics' value="-=10">my political life is private, and i’m not looking to judge or be judged. we’re all just people.
+        </br>
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">how do you feel about “political correctness”?</h2>
+
+        <input type="radio" ng-model='formData.ratings.politics' value="+=10">it’s a sign of progress. i can be a comedian and still be politically aware.
+        </br>
+        <input type="radio" ng-model='formData.ratings.politics' value="+=10">it’s a sign of degeneracy. we’re losing this country to the crazies.
+        </br>
+        <input type="radio" ng-model='formData.ratings.politics' value="-=10">it’s an annoyance. they’re “jokes,” people.
+        </br>
+        <input type="radio" ng-model='formData.ratings.politics' value="-=2">it’s not something i think about.
+        </br>
+      </div>
+
+      <div class="questionnaire">
+        <h2 class="questionnaireQ">whose career would you be most proud to have?</h2>
+
+        <input type="radio" ng-model='formData.ratings.ambition' value="+=10">adam sandler
+        </br>
+        <input type="radio" ng-model='formData.ratings.politics' value="+=10">jon stewart
+        </br>
+        <input type="radio" ng-model='formData.ratings.ambition' value="+=10">judd apatow
+        </br>
+        <input type="radio" ng-model='formData.ratings.edginess' value="+=5">lena dunham
+        </br>
+        <input type="radio" ng-model='formData.ratings.ambition' value="-=10">del close
+        </br>
+      </div>
+
+    </script>
   </div>
- -->
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-    </body>
 
-    </html>
+  <!-- </div> -->
+
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script> -->
+  </body>
+
+  </html>
