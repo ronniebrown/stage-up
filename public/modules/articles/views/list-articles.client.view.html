@@ -1,9 +1,12 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
+	
+
 	<div class="directoryHeader">
-		<h1>Articles</h1>
+		<h1>Directory</h1>
+		  Search: <input ng-model="query">
 	</div>
 	<div class="list-group">
-		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
+		<a data-ng-repeat="article in articles | filter:query" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
 			<!-- <small class="list-group-item-text"> -->
 				<img ng-src="{{ article.basic.picture }}" height="100px">
 				<span class="directoryName">{{ article.username }}</span> {{ article.basic.age }} year old {{ article.fixed.gender }} in {{ article.basic.location }}
