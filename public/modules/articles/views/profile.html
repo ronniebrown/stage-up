@@ -6,10 +6,10 @@
 
 
 <!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"> -->
 
 <!--   FIX THIS -->
-<style>
+<!-- <style>
 body {
   padding: 50px;
   font: 14px "Open Sans", Helvetica, Arial, sans-serif;
@@ -54,7 +54,7 @@ a {
 #tab-text-center {
   text-align: center;
 }
-</style>
+</style> -->
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
     <!-- WARNING: Respond.js doesn't work if you view the page via file://
     <!--[if lt IE 9]>
@@ -96,41 +96,41 @@ a {
   <!-- src should be /public/modules/articles/images/profile-img.webp -->
   <!-- <img src="./images/profile-img.webp" alt="profilepic"> -->
   <!-- </div> -->
-  <div class="col s3">
-    <img ng-src="{{ profile.basic.picture }}">
-    <span id="username" class="flow-text">{{ profile.username }}</span>
-    <br>
-    <div class="fixedBox">
-      age: <span class="fixed"> {{ profile.basic.age }} </span>
-      <span class="bullet">&#149;</span>
-      <br> location: <span class="fixed"> {{ profile.basic.location }} </span>
-      <span class="bullet">&#149;</span>
-      <br> gender: <span class="fixed"> {{ profile.fixed.gender }} </span>
-      <span class="empty-spacing"></span>
-      <br> ethnicity: <span class="fixed"> {{ profile.fixed.ethnicity }} </span>
-      <span class="empty-spacing"></span>
-      <br> orientation: <span class="fixed"> {{ profile.fixed.orientation }} </span>
-      <span class="empty-spacing"></span>
-      <br> politics: <span class="fixed"> {{ profile.fixed.politics }} </span>
-      <span class="empty-spacing"></span>
-      <br> years experience: <span class="fixed"> {{ profile.fixed.experienceInYears }} </span>
-      <span class="empty-spacing"></span>
-      <br> currently in classes? <span class="fixed"> {{ profile.fixed.inClasses }} </span>
-      <span class="empty-spacing"></span>
-      <br> currently in a group? <span class="fixed"> {{ profile.fixed.inGroup }} </span>
-      <span class="empty-spacing"></span>
-      <br> looking for: <span class="fixed"> {{ profile.fixed.seeking }} </span>
-      <span class="empty-spacing"></span>
+  <div class="profile">
+
+    <div class="profileHead">
+      <div class="profileFace">
+        <img ng-src="{{ profile.basic.picture }}">
+        <span id="username" class="flow-text">{{ profile.username }}</span> <span id="stats">{{ profile.basic.age }} year old {{ profile.fixed.gender }} in {{ profile.basic.location }}</span>
+      </div>
+      <div class="fixedBox">
+        <!-- age: <span class="fixed"> {{ profile.basic.age }} </span>
+        <span class="bullet">&#149;</span>
+        <br> location: <span class="fixed"> {{ profile.basic.location }} </span>
+        <span class="bullet">&#149;</span>
+        <br> gender: <span class="fixed"> {{ profile.fixed.gender }} </span>
+        <span class="empty-spacing"></span> -->
+        
+        <ul>
+
+          <li> ethnicity  <span class="fixed"> {{ profile.fixed.ethnicity }} </span></li>
+          <li> orientation  <span class="fixed"> {{ profile.fixed.orientation }} </span></li>
+          <li> politics  <span class="fixed"> {{ profile.fixed.politics }} </span></li>
+          <li> years experience  <span class="fixed"> {{ profile.fixed.experienceInYears }} </span></li>
+          <li> currently in classes?  <span class="fixed"> {{ profile.fixed.inClasses }} </span></li>
+          <li> currently in a group?  <span class="fixed"> {{ profile.fixed.inGroup }} </span></li>
+          <li> looking for  <span class="fixed"> {{ profile.fixed.seeking }} </span></li>
+        </ul>
+      </div>
     </div>
     <!-- FIX THIS -->
     <!-- src should be /public/modules/articles/images/glyphicons/glyphicons-31-pencil.png -->
     <!-- <img id="glyphicon-pencil" src="./images/glyphicons/glyphicons-31-pencil.png" alt="pencil-glyphicon"> -->
-  </div>
-  </div>
 
-  <div class="row">
-    <!-- TABS SECTION -->
-    <div class="col s12 z-depth-1">
+
+    <div class="profileBody">
+      <!-- TABS SECTION -->
+      <!-- <div class="col s12 z-depth-1">
       <ul class="tabs" id="tab-text-center">
         <li class="tab col s3">
           <a class="active " href="#about">About</a>
@@ -148,100 +148,82 @@ a {
     </div>
 
     <br>
-    <!-- MAIN SECTION -->
-    <!-- <div class="col s12 z-depth-1" id="about">
-        <div class="col s6">
-          <p class="flow-text">
-            About Me:
-          </p>
-          <p>
-            {{ profile.essay.about }}
-          </p>
-        </div>
-        <div class="col s6">
-          <p class="flow-text">
-            I'm looking to connect with:
-          </p>
-          <p>
-            {{ profile.essay.lookingFor }}
-          </p>
-        </div>
-      </div> -->
+ -->
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        about Me:
-      </p>
-      <p>
-        {{ profile.essay.about }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          about me:
+        </p>
+        <p>
+          {{ profile.essay.about }}
+        </p>
+      </div>
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        where have you studied and for how long?:
-      </p>
-      <p>
-        {{ profile.essay.improvExperience }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          where have you studied and for how long?
+        </p>
+        <p>
+          {{ profile.essay.improvExperience }}
+        </p>
+      </div>
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        do you have any other acting or comedy experience?
-      </p>
-      <p>
-        {{ profile.essay.otherExperience }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          do you have any other acting or comedy experience?
+        </p>
+        <p>
+          {{ profile.essay.otherExperience }}
+        </p>
+      </div>
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        what forms or styles do you like?
-      </p>
-      <p>
-        {{ profile.essay.styles }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          what forms or styles do you like?
+        </p>
+        <p>
+          {{ profile.essay.styles }}
+        </p>
+      </div>
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        favorite shows and movies:
-      </p>
-      <p>
-        {{ profile.essay.favoriteShows }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          favorite shows and movies
+        </p>
+        <p>
+          {{ profile.essay.favoriteShows }}
+        </p>
+      </div>
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        what's your idea of the perfect group?
-      </p>
-      <p>
-        {{ profile.essay.ideal }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          what's your idea of the perfect group?
+        </p>
+        <p>
+          {{ profile.essay.ideal }}
+        </p>
+      </div>
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        how often do you want to meet, practice, or perform?
-      </p>
-      <p>
-        {{ profile.essay.workstyle }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          how often do you want to meet, practice, or perform?
+        </p>
+        <p>
+          {{ profile.essay.workstyle }}
+        </p>
+      </div>
 
-    <div class="col s12 z-depth-1">
-      <p class="flow-text">
-        i'm looking to connect with:
-      </p>
-      <p>
-        {{ profile.essay.lookingFor }}
-      </p>
-    </div>
+      <div class="essay">
+        <p class="essayQ">
+          i'm looking to connect with
+        </p>
+        <p>
+          {{ profile.essay.lookingFor }}
+        </p>
+      </div>
 
 
-    <!--       <div class="col s12 z-depth-1" id="personality">
+      <!--       <div class="col s12 z-depth-1" id="personality">
         <p class="flow-text">
           Personality section
         </p>
@@ -249,9 +231,9 @@ a {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est aliquid consequatur deserunt, vel maxime veniam ipsum, labore. Quidem alias repellat perspiciatis fugiat veritatis, distinctio dolorem maxime laborum nihil nemo.
         </p>
       </div> -->
-  </div>
+    </div>
 
-  <!--   <div class="row">
+    <!--   <div class="row">
     <div class="col s12 z-depth-1">
       <p class="flow-text">
         i'm looking to connect with:
@@ -263,9 +245,9 @@ a {
   </div>
  -->
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-  </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    </body>
 
-  </html>
+    </html>
