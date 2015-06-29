@@ -6,10 +6,34 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 
 		$scope.formData = {};
 		
+    $scope.tabs = [{
+            title: 'about',
+            url: 'one.tpl.html'
+        }, {
+            title: 'work samples',
+            url: 'two.tpl.html'
+        }, {
+            title: 'questions',
+            url: 'three.tpl.html'
+    }];
+
+    $scope.currentTab = 'one.tpl.html';
+
+    $scope.onClickTab = function (tab) {
+        $scope.currentTab = tab.url;
+    };
+    
+    $scope.isActiveTab = function(tabUrl) {
+        return tabUrl == $scope.currentTab;
+    };
+
+
 
 		$scope.create = function() {
 			var article = new Articles($scope.formData);
 			article.$save(function(response) {
+				console.log($scope.formData);
+				console.log(response);
 				$location.path('articles/' + response._id);
 
 				// $scope.title = '';

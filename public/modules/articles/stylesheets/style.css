@@ -7,6 +7,10 @@ a {
   color: #00B7FF;
 }
 
+h3 {
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;  
+}
+
 #profile-thumb {
   position: relative;
   width: 300px;
