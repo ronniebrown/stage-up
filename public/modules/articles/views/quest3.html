@@ -1,63 +1,48 @@
-<!-- <section data-ng-controller="ArticlesController">
-	<div class="page-header">
-		<h1>Make your profile</h1>
-	</div>
-	<div class="col-md-12">
- -->
-<!-- <form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
- -->
-<!-- <fieldset> -->
-
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">How would your peers describe you?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.about' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">How would your peers describe you?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.about' type="text" placeholder="Relentlessly fearless">
 </div>
 
-
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What's your improv experience level like?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.improvExperience' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">What's your improv experience level like?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.improvExperience' type="text" placeholder="Poehler and I are tight...">
 </div>
 
-
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Do you have other acting or comedy experience?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.otherExperience' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">Do you have other acting or comedy experience?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.otherExperience' type="text" placeholder="Umm uou should know me">
 </div>
 
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Who or what is funny to you?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.funny' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">Who or what is funny to you?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.funny' type="text" placeholder="I am simply hilarious.">
 </div>
 
-
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What forms or styles do you prefer?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.styles' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">What forms or styles do you prefer?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.styles' type="text" placeholder="I am my own style">
 </div>
 
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">Favorite shows, movies, etc?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.favoriteShows' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">Favorite shows, movies, etc?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.favoriteShows' type="text" placeholder="Broad City, SNL...">
 </div>
 
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">What's your idea of the perfect group?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.ideal' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">What's your idea of the perfect group?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.ideal' type="text" placeholder="Like UCB but more talent">
 </div>
 
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">How often would you want your group to meet or perform, and where?</h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.ideal' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">How often would you want your group to meet or perform, and where?</h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.ideal' type="text" placeholder="WeHo, 3 times a week">
 </div>
 
-<h2 class="control-label col-xs-6 col-xs-offset-3" for="title">I'm looking to connect with... </h2>
-<div class="form-group">
-  <input class="form-control-static" id="focusedInput" ng-model='formData.essay.lookingFor' type="text" value="I am 13 of of 29 tomatoes on stage, I am simply hilarious.">
+<h3 class="control-label col-xs-6 col-xs-offset-3" for="title">I'm looking to connect with... </h3>
+<div class="form-group col-xs-6 col-xs-offset-4">
+  <input class="form-control" id="focusedInput" ng-model='formData.essay.lookingFor' type="text" placeholder="People like me!">
 </div>
 
-<input type="submit" class="btn btn-default" value="Create Profile">
+<div class="form-group col-xs-6 col-xs-offset-4">
+<input type="submit" class="btn btn-default" placeholder="Create Profile">
 </div>
-
-<!-- </fieldset> -->
-<!-- </form> -->

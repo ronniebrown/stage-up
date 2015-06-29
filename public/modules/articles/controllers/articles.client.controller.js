@@ -10,6 +10,8 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		$scope.create = function() {
 			var article = new Articles($scope.formData);
 			article.$save(function(response) {
+				console.log($scope.formData);
+				console.log(response);
 				$location.path('articles/' + response._id);
 
 				// $scope.title = '';
