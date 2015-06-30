@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/lobsteranddeath-dev',
+	db: 'mongodb://ronnie:brown@ds047622.mongolab.com:47622/lobsterndeath',
 	app: {
 		title: 'lobsteranddeath - Development Environment'
 	},

@@ -143,11 +143,15 @@ var ArticleSchema = new Schema({
       type: Number,
       value: 0
     },
-    lightDark: {
+    edginess: {
       type: Number,
       value: 0
     },
-    experimentalTraditional: {
+    attitude: {
+      type: Number,
+      value: 0
+    },
+    ambition: {
       type: Number,
       value: 0
     },
@@ -155,7 +159,11 @@ var ArticleSchema = new Schema({
       type: Number,
       value: 0
     },
-    diversityInterest: {
+    diversity: {
+      type: Number,
+      value: 0
+    },
+    conflict: {
       type: Number,
       value: 0
     }
