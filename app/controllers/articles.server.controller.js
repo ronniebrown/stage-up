@@ -96,6 +96,10 @@ exports.articleByID = function(req, res, next, id) {
 	});
 };
 
+// exports.show = function(req, res) {
+// 	res.json("hello");
+// }
+
 /**
  * Article authorization middleware
  */

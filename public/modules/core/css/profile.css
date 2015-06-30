@@ -2035,8 +2035,9 @@ ul {
 
 blockquote {
   margin: 20px 0;
+  line-height: 1.3;
   padding-left: 1.5rem;
-  border-left: 5px solid #EF9A9A; }
+  border-left: 5px solid #666; }
 
 i {
   line-height: inherit; }
@@ -2072,7 +2073,7 @@ img.responsive-img, video.responsive-video {
   .pagination li.active a {
     color: #fff; }
   .pagination li.active {
-    background-color: #ee6e73; }
+    background-color: #000; }
   .pagination li.disabled a {
     color: #999; }
   .pagination li i {
@@ -2168,7 +2169,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #ee6e73; }
+  background-color: #000; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
     height: 50px;
@@ -5006,7 +5007,7 @@ span.badge {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #000;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -5033,6 +5034,7 @@ nav {
   nav .brand-logo {
     position: absolute;
     color: #fff;
+    margin-left: 20%;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0; }
@@ -6150,10 +6152,10 @@ textarea {
   Radio Buttons
 ***************/
 /* Remove default Radio Buttons */
-[type="radio"]:not(:checked), [type="radio"]:checked {
+/*[type="radio"]:not(:checked), [type="radio"]:checked {
   position: absolute;
   left: -9999px;
-  visibility: hidden; }
+  visibility: hidden; }*/
 
 [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
   position: relative;
