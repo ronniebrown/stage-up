@@ -17,11 +17,11 @@ The typical options are for creatives looking to band together are:
 * Someone gives you their friend's email address and says to look them up. This is probably weird and annoying. How do you know what kind of work the friend does? How do you know if they're looking for collaborators?
 * 
 
-[![Landing Page](https://i.imgur.com/G8jpmD0.png)]
+![Landing Page](https://i.imgur.com/G8jpmD0.png)
 
 LOBSTERDEATH is a platform for creatives to find collaborators. It will ask you a bunch of questions to quantify your compatibility with others based on your tastes, experience, and working style. It should recommend matches. 
 
-[![Profile Page](https://slack-files.com/files-tmb/T0455847Q-F071T9F36-506f50f818/screen_shot_2015-06-30_at_12.46.31_pm_1024.png)]
+![Profile Page](https://slack-files.com/files-tmb/T0455847Q-F071T9F36-506f50f818/screen_shot_2015-06-30_at_12.46.31_pm_1024.png)
 
 It will be a safe space to reach out to others without feeling weird or intrusive. It should give you a sense of who you're meeting before you meet them. It will allow you to present work samples in an attractive layout.
 
