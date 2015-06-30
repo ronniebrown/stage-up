@@ -20,7 +20,7 @@ The typical options are for creatives looking to band together are:
 
 LOBSTERDEATH is a platform for creatives to find collaborators. It will ask you a bunch of questions to quantify your compatibility with others based on your tastes, experience, and working style. It should recommend matches. 
 
-![Profile Page](https://slack-files.com/files-tmb/T0455847Q-F071T9F36-506f50f818/screen_shot_2015-06-30_at_12.46.31_pm_1024.png =300x300)
+![Profile Page](https://slack-files.com/files-tmb/T0455847Q-F071T9F36-506f50f818/screen_shot_2015-06-30_at_12.46.31_pm_1024.png)
 
 It will be a safe space to reach out to others without feeling weird or intrusive. It should give you a sense of who you're meeting before you meet them. It will allow you to present work samples in an attractive layout.
 
