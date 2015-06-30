@@ -5005,11 +5005,11 @@ span.badge {
         margin-left: 100%; } }
 
 nav {
-  color: #fff;
   /*background-color: #000;*/
   width: 100%;
   height: 56px;
-  line-height: 56px; }
+  line-height: 56px;
+  color: #fff; }
   nav a {
     color: #fff; }
   nav .nav-wrapper {
@@ -6150,10 +6150,10 @@ textarea {
   Radio Buttons
 ***************/
 /* Remove default Radio Buttons */
-[type="radio"]:not(:checked), [type="radio"]:checked {
+/*[type="radio"]:not(:checked), [type="radio"]:checked {
   position: absolute;
   left: -9999px;
-  visibility: hidden; }
+  visibility: hidden; }*/
 
 [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
   position: relative;

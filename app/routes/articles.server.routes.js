@@ -11,10 +11,11 @@ module.exports = function(app) {
   app.route('/articles')
     .get(articles.list)
     .post(articles.create);
+    // .put(articles.show);
 
   app.route('/articles/:articleId')
     .get(articles.read)
-    // .put(users.requiresLogin, articles.hasAuthorization, articles.update)
+    .put(articles.update)
     // .delete(users.requiresLogin, articles.hasAuthorization, articles.delete);
 
   // Finish by binding the article middleware

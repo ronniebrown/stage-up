@@ -92,8 +92,8 @@ video .jumbotron {
     color: black;
     font-size: 2.5em;
     font-weight: 100;
-    vertical-align: -120%;
-    margin-left: 50px;
+    vertical-align: -150%;
+    margin-left: 20px;
     /*background-color: black;
     color: white;*/
     
@@ -104,13 +104,13 @@ video .jumbotron {
 #stats {
     vertical-align: -275%;
     margin-left: 10px;
-    font-weight: 100;
+    font-weight: 400;
     /*background-color: red;*/
 }
 
 .fixed {
     list-style-type: none;
-    width: 200px;
+    width: 150px;
     /*margin-right: 0;*/
     /*margin-left: auto;*/
     /*margin: 0px;*/
@@ -120,6 +120,7 @@ video .jumbotron {
     font-weight: 300;
     padding-left: 5px;
     /*margin: 1px;*/
+    
     border-left: 4px solid white;
     font-size: 1em;
     color: white;
@@ -132,12 +133,13 @@ video .jumbotron {
 }
 
 .fixedBox {
-    width: 425px;
+    width: 300px;
     height: 180px;
     /*margin: 0px;*/
     /*position: relative;*/
     /*border-left: px solid white;*/
-    display: inline;
+    
+    display: inline-block;
     font-weight: 100;
     /*margin-right: auto;
     margin-left: auto;*/
@@ -145,7 +147,7 @@ video .jumbotron {
     float: right;
     font-size: 1em;
     /*background-color: black;*/
-    /*color: black;*/
+    color: #444;
     
     text-align: right;
 }
@@ -155,10 +157,11 @@ video .jumbotron {
 }
 
 .essayQ {
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1.2em;
     font-family: "Helvetica Neue";
     /*border-bottom: solid black 1px;*/
+    
     color: #333;
     margin-left: -5px;
     margin-top: 20px;
@@ -167,12 +170,15 @@ video .jumbotron {
 .essay {
     /*font-weight: 400;*/
     /*color: #555;*/
+    
     font-size: 0.8em;
     font-family: "Courier New";
+    display: block;
+    margin-top: 20px;
 }
 
 .profileBody {
-    width: 100%;
+    width: 90%;
     font-family: "Courier New";
     /*margin: 50px;*/
     /*font-size: 3em;*/
@@ -229,35 +235,48 @@ video .jumbotron {
 #tabs ul {
     position: relative;
     list-style-type: none;
-    margin-left: 0.5%;
-
+    margin-left: 5%;
+    margin-right: auto;
     padding: 0;
-    display: block;
+    display: inline-block;
     width: 100%;
     font-family: "Courier New";
     font-weight: 100;
     font-size: 1.5em;
 }
+
 #tabs li {
     float: left;
     text-align: center;
-    width: 33%;    
-    display: inline;
+    width: 30%;
+    display: inline-block;
+    position: relative;
     margin-top: 40px;
     margin-bottom: 50px;
     border: 1px solid black;
 }
+
 .nav {
     background-color: black;
     font-family: "Courier New";
 }
+
 nav {
     background-color: black;
     font-family: "Courier New";
 }
 
+.navbar-brand {
+    margin-left: 15%;
+}
+
+.navbar-right {
+    margin-right: 15%;
+}
+
 .navbar-header {
     /*margin-right: 20px;*/
+    
     background-color: black;
     font-family: "Courier New";
 }
