@@ -47,7 +47,7 @@ video .jumbotron {
 .profile {
     /*display: inline-block;*/
     
-    width: 100%;
+    width: 800px;
     font-family: 'Helvetica Neue';
     /*margin-bottom: 30px;*/
     
@@ -57,11 +57,9 @@ video .jumbotron {
 .profileHead {
     /*position: relative;*/
     
-    width: 100%;
+    width: 900px;
     height: 180px;
     border-bottom: solid 5px black;
-    /*background-color: red;*/
-    
     margin-bottom: 20px;
 }
 
@@ -79,8 +77,6 @@ video .jumbotron {
 }
 
 .profile img {
-    /*margin-top: 10px;*/
-    
     height: 180px;
     border-bottom: 5px solid black;
     border-left: 5px solid black;
@@ -92,11 +88,8 @@ video .jumbotron {
     color: black;
     font-size: 2.5em;
     font-weight: 100;
-    vertical-align: -150%;
+    vertical-align: -80px;
     margin-left: 20px;
-    /*background-color: black;
-    color: white;*/
-    
     padding: 15px;
     border: solid 5px black;
 }
@@ -104,51 +97,34 @@ video .jumbotron {
 #stats {
     vertical-align: -275%;
     margin-left: 10px;
-    font-weight: 400;
-    /*background-color: red;*/
+    font-weight: 400;    
 }
 
 .fixed {
     list-style-type: none;
-    width: 150px;
-    /*margin-right: 0;*/
-    /*margin-left: auto;*/
-    /*margin: 0px;*/
-    /*display: inline;*/
-    
+    width: 100px;
     font-family: 'Helvetica Neue';
     font-weight: 300;
     padding-left: 5px;
-    /*margin: 1px;*/
-    
     border-left: 4px solid white;
     font-size: 1em;
     color: white;
     background-color: #444;
-    /*margin: 5px;*/
-    /*position: relative;*/
-    
-    float: right;
+    position: absolute;
+    margin-left: 0px;
+
     text-align: left;
 }
 
 .fixedBox {
-    width: 300px;
+    width: 240px;
     height: 180px;
-    /*margin: 0px;*/
-    /*position: relative;*/
-    /*border-left: px solid white;*/
-    
-    display: inline-block;
+    margin-left: 560px;
+    /*display: inline-block;*/
     font-weight: 100;
-    /*margin-right: auto;
-    margin-left: auto;*/
-    
-    float: right;
+    position: absolute;
     font-size: 1em;
-    /*background-color: black;*/
     color: #444;
-    
     text-align: right;
 }
 
@@ -248,9 +224,9 @@ video .jumbotron {
 #tabs li {
     float: left;
     text-align: center;
-    width: 30%;
+    width: 250px;
     display: inline-block;
-    position: relative;
+    /*position: relative;*/
     margin-top: 40px;
     margin-bottom: 50px;
     border: 1px solid black;
