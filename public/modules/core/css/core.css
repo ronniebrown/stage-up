@@ -47,7 +47,7 @@ video .jumbotron {
 .profile {
     /*display: inline-block;*/
     
-    width: 100%;
+    width: 800px;
     font-family: 'Helvetica Neue';
     /*margin-bottom: 30px;*/
     
@@ -57,11 +57,9 @@ video .jumbotron {
 .profileHead {
     /*position: relative;*/
     
-    width: 100%;
+    width: 900px;
     height: 180px;
     border-bottom: solid 5px black;
-    /*background-color: red;*/
-    
     margin-bottom: 20px;
 }
 
@@ -79,8 +77,6 @@ video .jumbotron {
 }
 
 .profile img {
-    /*margin-top: 10px;*/
-    
     height: 180px;
     border-bottom: 5px solid black;
     border-left: 5px solid black;
@@ -92,11 +88,8 @@ video .jumbotron {
     color: black;
     font-size: 2.5em;
     font-weight: 100;
-    vertical-align: -120%;
-    margin-left: 50px;
-    /*background-color: black;
-    color: white;*/
-    
+    vertical-align: -80px;
+    margin-left: 20px;
     padding: 15px;
     border: solid 5px black;
 }
@@ -104,49 +97,34 @@ video .jumbotron {
 #stats {
     vertical-align: -275%;
     margin-left: 10px;
-    font-weight: 100;
-    /*background-color: red;*/
+    font-weight: 400;    
 }
 
 .fixed {
     list-style-type: none;
-    width: 200px;
-    /*margin-right: 0;*/
-    /*margin-left: auto;*/
-    /*margin: 0px;*/
-    /*display: inline;*/
-    
+    width: 100px;
     font-family: 'Helvetica Neue';
     font-weight: 300;
     padding-left: 5px;
-    /*margin: 1px;*/
     border-left: 4px solid white;
     font-size: 1em;
     color: white;
     background-color: #444;
-    /*margin: 5px;*/
-    /*position: relative;*/
-    
-    float: right;
+    position: absolute;
+    margin-left: 0px;
+
     text-align: left;
 }
 
 .fixedBox {
-    width: 425px;
+    width: 240px;
     height: 180px;
-    /*margin: 0px;*/
-    /*position: relative;*/
-    /*border-left: px solid white;*/
-    display: inline;
+    margin-left: 560px;
+    /*display: inline-block;*/
     font-weight: 100;
-    /*margin-right: auto;
-    margin-left: auto;*/
-    
-    float: right;
+    position: absolute;
     font-size: 1em;
-    /*background-color: black;*/
-    /*color: black;*/
-    
+    color: #444;
     text-align: right;
 }
 
@@ -155,10 +133,11 @@ video .jumbotron {
 }
 
 .essayQ {
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1.2em;
     font-family: "Helvetica Neue";
     /*border-bottom: solid black 1px;*/
+    
     color: #333;
     margin-left: -5px;
     margin-top: 20px;
@@ -167,12 +146,15 @@ video .jumbotron {
 .essay {
     /*font-weight: 400;*/
     /*color: #555;*/
+    
     font-size: 0.8em;
     font-family: "Courier New";
+    display: block;
+    margin-top: 20px;
 }
 
 .profileBody {
-    width: 100%;
+    width: 90%;
     font-family: "Courier New";
     /*margin: 50px;*/
     /*font-size: 3em;*/
@@ -229,35 +211,48 @@ video .jumbotron {
 #tabs ul {
     position: relative;
     list-style-type: none;
-    margin-left: 0.5%;
-
+    margin-left: 5%;
+    margin-right: auto;
     padding: 0;
-    display: block;
+    display: inline-block;
     width: 100%;
     font-family: "Courier New";
     font-weight: 100;
     font-size: 1.5em;
 }
+
 #tabs li {
     float: left;
     text-align: center;
-    width: 33%;    
-    display: inline;
+    width: 250px;
+    display: inline-block;
+    /*position: relative;*/
     margin-top: 40px;
     margin-bottom: 50px;
     border: 1px solid black;
 }
+
 .nav {
     background-color: black;
     font-family: "Courier New";
 }
+
 nav {
     background-color: black;
     font-family: "Courier New";
 }
 
+.navbar-brand {
+    margin-left: 15%;
+}
+
+.navbar-right {
+    margin-right: 15%;
+}
+
 .navbar-header {
     /*margin-right: 20px;*/
+    
     background-color: black;
     font-family: "Courier New";
 }
